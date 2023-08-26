@@ -7,6 +7,6 @@ export default function Footer() {
       <div className={`${s["footer-content"]} row`}>
         <span>Footer</span>
       </div>
-    </div>
+    </footer>
   );
 }
