@@ -55,7 +55,7 @@ const doctors = [
 
 function MainPage() {
   return (
-    <div className={s["main-page"]}>
+    <div className={`${s["main-page"]} row`}>
       <div className={s["side-menu"]}>Menu here</div>
       <div className={s["main-content"]}>
         {doctors.map((doc) => (
