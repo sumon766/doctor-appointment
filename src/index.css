@@ -19,18 +19,20 @@ body {
   width: 90%;
   margin: 0 auto;
 }
-.full-container{
+
+.full-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.main-container{
+.main-container {
   padding-top: 30px;
   width: 90%;
 }
-.navbar-container{
+
+.navbar-container {
   position: absolute;
-  top:50px;
-  left:20px
+  top: 50px;
+  left: 20px;
 }

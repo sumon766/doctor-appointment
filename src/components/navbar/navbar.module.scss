@@ -1,15 +1,38 @@
-.navbar-links{
-    display:flex ;
-    flex-direction: column;
-   a{
-   padding:5px 15px;
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    padding: 5px 15px;
     text-decoration: none;
-     font-weight: bolder;
-     font-size: larger;
-     color: black;
-   }
-   a:hover{
-    background-color:#98bf11;
-    color:white
-   }
+    font-weight: bolder;
+    font-size: larger;
+    color: black;
+  }
+
+  a:hover {
+    background-color: #98bf11;
+    color: white;
+  }
 }
+
+.navbar {
+    // Styles for the overall navbar container
+  }
+  
+  .navbar-mobile-toggle {
+    // Styles for the mobile menu toggle button
+  }
+  
+  .navbar-links {
+    // Styles for the navigation links on desktop
+    display: flex;
+    // Other desktop styles...
+  
+    &.mobile-open {
+      // Styles for the navigation links on mobile when the menu is open
+      display: block;
+      // Other mobile menu styles...
+    }
+  }
+  
