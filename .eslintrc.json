@@ -55,9 +55,11 @@
         "operator-linebreak": "off",
         "dot-notation": "off",
         "camelcase": "off",
+        "comma-dangle": "off",
         "no-underscore-dangle": "off",
         "function-paren-newline": "off",
-        "arrow-body-style": "off"
+        "arrow-body-style": "off",
+        "react/prop-types": "off"
       }
     }
   ],
