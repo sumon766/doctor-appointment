@@ -8,7 +8,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import RootLayout from "./Layout/RootLayout";
-import ContactPage from "./components/pages/ContactPage";
+import Appointment from "./components/pages/Appointment";
 import MainPage from "./components/pages/MainPage";
 import SingleDoctorPage from "./components/pages/SingleDoctorPage";
 
@@ -17,7 +17,7 @@ export const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<MainPage />} />
       <Route path="/doctors/:id" element={<SingleDoctorPage />} />
-      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/appointment" element={<Appointment />} />
     </Route>
   )
 );
