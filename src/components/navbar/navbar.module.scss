@@ -1,66 +1,46 @@
-.navbar-desktop-container{
-    .humberger-icon 
-    {
-        display: none;
-    }
+
 .navbar-links {
-  display: flex;
-  flex-direction: column;
- 
-}
-  a {
-    padding: 5px 15px;
-    text-decoration: none;
-    font-weight: bolder;
-    font-size: larger;
-    color: black;
-  }
+display: flex;
+flex-direction: column;
 
-  a:hover {
-    background-color: #98bf11;
-    color: white;
-  }
+}
+a {
+  padding: 5px 15px;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: larger;
+  color: black;
 }
 
+a:hover {
+  background-color: #98bf11;
+  color: white;
+}
 
+.nav-btn{
+  display: none;
+}
 @media (max-width: 768px)
  {
-  body{
-    background-color: aqua;
-    
+  .nav-btn{
+    display: block;
   }
-  .navbar-to-mobile{
-  
-    .navbar-links {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-     
-    }
-      a {
-     
-        text-decoration: none;
-        font-weight: bolder;
-        font-size: larger;
-        color: black;
-      }
-    
-      a:hover {
-        background-color: #98bf11;
-        color: white;
-      }
-  }
-//     .navbar-desktop-container
-//     {  
-//       display: none;
-
-// }
-//  .navbar-mobile-container{
-//   display: block;
-// }  
-// .navbar-links{
-//   display: none;
-// }
+  nav.desktop-navbar {
+    display: none;
 }
 
-  
+.removeNavbar {
+  display: none;
+}
+
+
+.navbar-links a{
+  border-radius: 20px;
+ 
+}
+
+ }
+
+
+
+
