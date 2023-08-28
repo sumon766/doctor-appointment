@@ -1,7 +1,13 @@
+.navbar-desktop-container{
+    .humberger-icon 
+    {
+        display: none;
+    }
 .navbar-links {
   display: flex;
   flex-direction: column;
-
+ 
+}
   a {
     padding: 5px 15px;
     text-decoration: none;
@@ -16,23 +22,45 @@
   }
 }
 
-.navbar {
-    // Styles for the overall navbar container
+
+@media (max-width: 768px)
+ {
+  body{
+    background-color: aqua;
+    
   }
+  .navbar-to-mobile{
   
-  .navbar-mobile-toggle {
-    // Styles for the mobile menu toggle button
-  }
-  
-  .navbar-links {
-    // Styles for the navigation links on desktop
-    display: flex;
-    // Other desktop styles...
-  
-    &.mobile-open {
-      // Styles for the navigation links on mobile when the menu is open
-      display: block;
-      // Other mobile menu styles...
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+     
     }
+      a {
+     
+        text-decoration: none;
+        font-weight: bolder;
+        font-size: larger;
+        color: black;
+      }
+    
+      a:hover {
+        background-color: #98bf11;
+        color: white;
+      }
   }
+//     .navbar-desktop-container
+//     {  
+//       display: none;
+
+// }
+//  .navbar-mobile-container{
+//   display: block;
+// }  
+// .navbar-links{
+//   display: none;
+// }
+}
+
   
