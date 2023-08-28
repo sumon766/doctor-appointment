@@ -1,9 +1,9 @@
 
 .navbar-links {
-display: flex;
-flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
 }
+
 a {
   padding: 5px 15px;
   text-decoration: none;
@@ -17,30 +17,24 @@ a:hover {
   color: white;
 }
 
-.nav-btn{
+.nav-btn {
   display: none;
 }
-@media (max-width: 768px)
- {
-  .nav-btn{
+
+@media (max-width: 768px) {
+  .nav-btn {
     display: block;
   }
+
   nav.desktop-navbar {
     display: none;
+  }
+
+  .removeNavbar {
+    display: none;
+  }
+
+  .navbar-links a {
+    border-radius: 20px;
+  }
 }
-
-.removeNavbar {
-  display: none;
-}
-
-
-.navbar-links a{
-  border-radius: 20px;
- 
-}
-
- }
-
-
-
-

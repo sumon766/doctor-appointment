@@ -1,10 +1,9 @@
 .footer {
   padding: 6px 0;
- 
 }
- @media (max-width: 768px)
- {
- .footer-content{
+
+@media (max-width: 768px) {
+  .footer-content {
     display: none;
   }
 }
