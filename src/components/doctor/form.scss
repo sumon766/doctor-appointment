@@ -1,0 +1,66 @@
+div.add-doctor-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  border: none;
+  background-color: #97BF0F;
+
+  .submit-form {
+    width: 400px;
+    padding: 50px 40px 40px 40px;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: #97BF0F;
+
+    h4 {
+      color:white;
+      margin-bottom: 20px;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    font-weight: bold;
+    color: white;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    color: grey;
+    outline: none;
+    border: none;
+  }
+  input:focus {
+    outline: 1px solid #97BF0F;
+    border: none;
+  }
+  input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    color: white;
+  }
+
+  button {
+    background-color: white;
+    color: #97BF0F;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+  }
+
+  button:hover{
+    background-color: #97BF0F;
+    color: white;
+    border: 1px solid white;
+  }
+}
