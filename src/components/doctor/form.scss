@@ -7,17 +7,17 @@ div.add-doctor-container {
   margin: 0 auto;
   padding: 20px;
   border: none;
-  background-color: #97BF0F;
+  background-color: #97bf0f;
 
   .submit-form {
     width: 400px;
     padding: 50px 40px 40px 40px;
     border-radius: 20px;
     border: 1px solid white;
-    background-color: #97BF0F;
+    background-color: #97bf0f;
 
     h4 {
-      color:white;
+      color: white;
       margin-bottom: 20px;
     }
   }
@@ -25,6 +25,7 @@ div.add-doctor-container {
   .form-group {
     margin-bottom: 20px;
   }
+
   label {
     font-weight: bold;
     color: white;
@@ -36,12 +37,13 @@ div.add-doctor-container {
     border: none;
     color: grey;
     outline: none;
-    border: none;
   }
+
   input:focus {
-    outline: 1px solid #97BF0F;
+    outline: 1px solid #97bf0f;
     border: none;
   }
+
   input[type="file"] {
     width: 100%;
     padding: 10px;
@@ -51,15 +53,15 @@ div.add-doctor-container {
 
   button {
     background-color: white;
-    color: #97BF0F;
+    color: #97bf0f;
     padding: 10px 20px;
     border: none;
     border-radius: 5%;
     cursor: pointer;
   }
 
-  button:hover{
-    background-color: #97BF0F;
+  button:hover {
+    background-color: #97bf0f;
     color: white;
     border: 1px solid white;
   }
