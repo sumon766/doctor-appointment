@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-// eslint-disable-next-line import/no-extraneous-dependencies
-import fileSaver from "file-saver";
+
 // eslint-disable-next-line import/no-extraneous-dependencies
 
 import { addNewDoctor } from "../../redux/doctor_list_slice";
@@ -46,24 +45,6 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // Create a FormData object
-    const formData = new FormData();
-
-    // Add the image file to the FormData object
-    console.log(formData);
-    // formData.append("photo", event.target);
-    // Get the file extension of the image file
-    const fileExtension = formData.get("photo").name.split(".")[1];
-
-    // Generate a random name for the image
-    // Save the image to the local filesystem
-    fileSaver.save(
-      formData.get("photo"),
-      `public/images/${formData.get("photo").name}.${fileExtension}`,
-    );
-
-    // Save the image path in the database
     saveDoctor();
   };
 
