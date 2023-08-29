@@ -1,10 +1,4 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-
-// eslint-disable-next-line import/no-extraneous-dependencies
-
-import { addNewDoctor } from "../../redux/doctor_list_slice";
-
 import "./form.scss";
 
 const Form = () => {
@@ -15,8 +9,6 @@ const Form = () => {
   };
   const [inputs, setInputs] = useState(initialFormState);
   const [submitted, setSubmitted] = useState(false);
-  const dispatch = useDispatch();
-
   const handleChange = (event) => {
     setInputs((inputs) => ({
       ...inputs,
@@ -24,35 +16,30 @@ const Form = () => {
     }));
   };
 
-  const saveDoctor = () => {
-    const { name, photo, description } = inputs;
-
-    dispatch(addNewDoctor({ name, photo, description }))
-      .unwrap()
-      .then((data) => {
-        console.log(data);
-        setInputs({
-          name: data.name,
-          photo: data.photo,
-          description: data.description,
-        });
+  const saveDoctor = (formData) => {
+    fetch('http://localhost:3000/api/v1/doctors', {
+      method: 'POST',
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then(() => {
         setSubmitted(true);
-      })
-      .catch((err) => {
-        console.log(err);
       });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    saveDoctor();
+    const formData = new FormData();
+    formData.append("doctor[name]", event.target.name.value);
+    formData.append("doctor[photo]", event.target.photo.files[0]);
+    formData.append("doctor[description]", event.target.description.value);
+    saveDoctor(formData);
   };
 
   const newDoctor = () => {
     setInputs(initialFormState);
     setSubmitted(false);
   };
-
   return (
     <div className="add-doctor-container">
       <div className="submit-form">
@@ -66,48 +53,49 @@ const Form = () => {
         ) : (
           <div>
             <h4>Add New Doctor</h4>
-            <div className="form-group">
-              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-              <input
-                type="text"
-                id="name"
-                required
-                value={inputs.name}
-                onChange={handleChange}
-                name="name"
-                placeholder="Name..."
-              />
-            </div>
+            <form onSubmit={(e) => handleSubmit(e)}>
+              <div className="form-group">
 
-            <div className="form-group">
-              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-              <input
-                type="text"
-                id="description"
-                required
-                value={inputs.description}
-                onChange={handleChange}
-                name="description"
-                placeholder="Description..."
-              />
-            </div>
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  value={inputs.name}
+                  onChange={handleChange}
+                  name="name"
+                  placeholder="Name..."
+                />
+              </div>
 
-            <div className="form-group">
-              {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-              <label htmlFor="photo">Photo</label>
-              <input
-                type="file"
-                id="photo"
-                required
-                value={inputs.photo}
-                onChange={handleChange}
-                name="photo"
-              />
-            </div>
+              <div className="form-group">
 
-            <button onClick={handleSubmit} type="submit">
-              Submit
-            </button>
+                <input
+                  type="text"
+                  id="description"
+                  required
+                  value={inputs.description}
+                  onChange={handleChange}
+                  name="description"
+                  placeholder="Description..."
+                />
+              </div>
+
+              <div className="form-group">
+
+                <label htmlFor="photo">
+                  <input
+                    type="file"
+                    id="photo"
+                    required
+                    value={inputs.photo}
+                    onChange={handleChange}
+                    name="photo"
+                  />
+                </label>
+              </div>
+
+              <button type="submit">Submit</button>
+            </form>
           </div>
         )}
       </div>

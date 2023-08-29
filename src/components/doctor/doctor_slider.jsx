@@ -53,7 +53,7 @@ const Doctor = () => {
             {list.map((item) => (
               <div className="doctor__content__item" key={item.id}>
                 <div className="doctor__content__item__img">
-                  <img src={item.photo} alt="not found" />
+                  <img src={item.photo_url} alt="not found" />
                 </div>
                 <div className="doctor__content__item__text">
                   <h3>{item.name}</h3>
