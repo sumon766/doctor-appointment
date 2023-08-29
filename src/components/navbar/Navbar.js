@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { FaTimes, FaBars } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import s from "./navbar.module.scss";
@@ -18,7 +19,7 @@ const Navbar = () => {
     { to: "/", text: "Doctor" },
     { to: "/appoint", text: "Appoint" },
     { to: "/my_appointments", text: "My Appointments" },
-    { to: "/add_doctor", text: "Add Doctor" },
+    { to: "/add-doctor", text: "Add Doctor" },
     { to: "/delete_doctor", text: "Delete Doctor" },
   ];
 
