@@ -5,7 +5,7 @@ import Doctor from "../doctor/doctor_slider";
 function MainPage() {
   return (
     <div className={`${s["main-page"]} row`}>
-      <div className={s["side-menu"]}>Menu here</div>
+      <div className={s["side-menu"]} />
       <div className={s["main-content"]}>
         <Doctor />
       </div>
