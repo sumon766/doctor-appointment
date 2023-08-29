@@ -11,11 +11,13 @@ import RootLayout from "./Layout/RootLayout";
 import ContactPage from "./components/pages/ContactPage";
 import MainPage from "./components/pages/MainPage";
 import SingleDoctorPage from "./components/pages/SingleDoctorPage";
+import AddDoctorForm from "./components/doctor/form";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<MainPage />} />
+      <Route path="/add-doctor" element={<AddDoctorForm />} />
       <Route path="/doctors/:id" element={<SingleDoctorPage />} />
       <Route path="/contact" element={<ContactPage />} />
     </Route>
