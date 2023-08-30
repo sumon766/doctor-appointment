@@ -1,12 +1,15 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Navbar from "../components/navbar/Navbar";
 
 function RootLayout() {
+  const location = useLocation();
+  const isAppointmentPage = location.pathname === "/appointment";
+
   return (
-    <div className="full-container">
+    <div className={isAppointmentPage ? "full-container appointment-page" : "full-container"}>
       <div className="navbar-container">
         <Header />
         <Navbar />
@@ -14,9 +17,7 @@ function RootLayout() {
       </div>
       <div className="main-container">
         <Outlet />
-
       </div>
-
     </div>
   );
 }
