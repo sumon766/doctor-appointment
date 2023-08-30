@@ -13,6 +13,21 @@ export const getDoctorList = createAsyncThunk('doctorLists/getDoctorList', async
   }
 });
 
+export const addNewDoctor = createAsyncThunk('doctorLists/addNewDoctor', async (doctor) => {
+  try {
+    const response = await fetch('http://localhost:3000/api/v1/doctors/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(doctor),
+    }).then((response) => response.json());
+    return response;
+  } catch (error) {
+    return error.message;
+  }
+});
+
 const doctorListSlice = createSlice({
   name: 'doctorLists',
   initialState,
@@ -27,6 +42,20 @@ const doctorListSlice = createSlice({
     );
     builder.addCase(
       getDoctorList.rejected,
+      (state, action) => {
+        // eslint-disable-next-line no-param-reassign
+        state.error = action.error.message;
+      },
+    );
+    builder.addCase(
+      addNewDoctor.fulfilled,
+      (state, action) => {
+        // eslint-disable-next-line no-param-reassign
+        state.list = action.payload;
+      },
+    );
+    builder.addCase(
+      addNewDoctor.rejected,
       (state, action) => {
         // eslint-disable-next-line no-param-reassign
         state.error = action.error.message;
