@@ -5,8 +5,10 @@ import Footer from "../components/Footer";
 import Navbar from "../components/navbar/Navbar";
 
 function RootLayout() {
+  const isAppointmentPage = window.location.pathname === "/appointment";
+
   return (
-    <div className="full-container">
+    <div className={isAppointmentPage ? "full-container appointment-page" : "full-container"}>
       <div className="navbar-container">
         <Header />
         <Navbar />
