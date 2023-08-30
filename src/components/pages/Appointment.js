@@ -3,6 +3,9 @@ import s from "./MainPage.module.scss";
 import "./Appointment.css";
 
 function Appointment() {
+  const doctorNames = ["John Doe", "Jane Doe", "Dr. Smith", "Dr. Johnson"];
+  const cityNames = ["New York", "California", "Alaska", "San Francisco"];
+
   return (
     <div className={`${s["main-page"]} row`}>
       <div className={s["side-menu"]} />
@@ -19,6 +22,30 @@ function Appointment() {
               but also the leap into electronic typesetting,
               remaining essentially unchanged.
             </p>
+            <div className="appointment-form">
+              <form className="form">
+                <select id="doctor">
+                  <option value="">Select a doctor</option>
+                  {doctorNames.map((doctor) => (
+                    <option key={doctor} value={doctor}>
+                      {doctor}
+                    </option>
+                  ))}
+                </select>
+
+                <select id="city">
+                  <option value="">Select a city</option>
+                  {cityNames.map((city) => (
+                    <option key={city} value={city}>
+                      {city}
+                    </option>
+                  ))}
+                </select>
+
+                <input id="date" type="date" name="date" />
+                <input id="submit" type="submit" name="submit" value="BOOK NOW" />
+              </form>
+            </div>
           </div>
         </div>
       </div>

@@ -11,7 +11,6 @@ import RootLayout from "./Layout/RootLayout";
 import Appointment from "./components/pages/Appointment";
 import MainPage from "./components/pages/MainPage";
 import SingleDoctorPage from "./components/pages/SingleDoctorPage";
-import Appoint from "./components/navbar/Appoint";
 import MyAppointment from "./components/navbar/MyAppointment";
 import AddDoctor from "./components/navbar/AddDoctor";
 import DeleteDoctor from "./components/navbar/DeleteForm";
@@ -23,7 +22,6 @@ export const router = createBrowserRouter(
       <Route path="/add_doctor" element={<AddDoctor />} />
       <Route path="/delete_doctor" element={<DeleteDoctor />} />
 
-      <Route path="/appoint" element={<Appoint />} />
       <Route index element={<MainPage />} />
       <Route path="/doctors/:id" element={<SingleDoctorPage />} />
       <Route path="/appointment" element={<Appointment />} />
