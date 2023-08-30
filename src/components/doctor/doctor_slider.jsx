@@ -18,13 +18,13 @@ const Doctor = () => {
     autoplay: true,
     arrows: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: list.count > 3 ? 3 : 2,
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 769,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: list.count > 2 ? 2 : 1,
           arrows: false,
         },
       },
@@ -53,7 +53,7 @@ const Doctor = () => {
             {list.map((item) => (
               <div className="doctor__content__item" key={item.id}>
                 <div className="doctor__content__item__img">
-                  <img src={item.photo} alt="not found" />
+                  <img src={item.photo_url} alt="not found" />
                 </div>
                 <div className="doctor__content__item__text">
                   <h3>{item.name}</h3>
