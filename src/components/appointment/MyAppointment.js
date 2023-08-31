@@ -1,5 +1,4 @@
 import React from 'react';
-import { list } from 'postcss';
 import s from './myappointment.module.scss';
 
 export default function MyAppointment() {
@@ -25,13 +24,22 @@ export default function MyAppointment() {
     <div className={s.myappointmentContainer}>
       <div className={s.appontmentsTable}>
         <table>
-          {appointmentlists.map(list)}
-          {/* <tr>
-            <th>{list.date}</th>
-            <th>{list.city}</th>
-            <th>{list.doctor_id}</th>
-          </tr> */}
-
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>City</th>
+              <th>Doctor</th>
+            </tr>
+          </thead>
+          <tbody>
+            {appointmentlists.map((list) => (
+              <tr key={list.id}>
+                <td>{list.date}</td>
+                <td>{list.city}</td>
+                <td>{list.doctor_id}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
 

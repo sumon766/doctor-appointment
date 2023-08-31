@@ -12,7 +12,7 @@
     height: 100%;
 }
 table {
-    margin: 300px 100px;
+    margin: 300px 50px;
     border-collapse: collapse;
     width: 100%;
     border: 1px solid #ddd;
@@ -27,12 +27,13 @@ table {
 
 
   tr:nth-child(even) {
-    background-color: #0165a0a6;
+    background-color: hsla(202, 76%, 55%, 0.651);
   }
   @media (max-width: 768px)
   {
     .myappointmentContainer{
         display: flex;
         margin: 0;
+        padding: 0;
     }
   }

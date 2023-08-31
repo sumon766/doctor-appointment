@@ -50,7 +50,7 @@ const Doctor = () => {
         <div className="doctor__content">
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           <Slider {...settings}>
-            {list.map((item) => (
+            {/* {list.map((item) => (
               <div className="doctor__content__item" key={item.id}>
                 <div className="doctor__content__item__img">
                   <img src={item.photo_url} alt="not found" />
@@ -60,7 +60,7 @@ const Doctor = () => {
                   <p>{item.description}</p>
                 </div>
               </div>
-            ))}
+            ))} */}
           </Slider>
         </div>
       </div>
