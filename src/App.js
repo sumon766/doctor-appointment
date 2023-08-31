@@ -20,8 +20,6 @@ export const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       <Route path="/my_appointments" element={<MyAppointment />} />
       <Route path="/delete-doctor" element={<DoctorsList />} />
-      <Route path="/appoint" element={<Appoint />} />
-      <Route path="/delete_doctor" element={<DeleteDoctor />} />
       <Route index element={<MainPage />} />
       <Route path="/add-doctor" element={<AddDoctorForm />} />
       <Route path="/doctors/:id" element={<SingleDoctorPage />} />
