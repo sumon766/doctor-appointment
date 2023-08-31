@@ -12,7 +12,7 @@
 }
 
 table {
-  margin: 300px 50px;
+  margin: 350px 50px;
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
@@ -24,10 +24,11 @@ td {
   padding: 8px;
   text-align: left;
   color: white;
+  width:150px;
 }
 
 tr:nth-child(even) {
-  background-color: hsla(202, 76%, 55%, 0.651);
+  background-color: rgba(11, 50, 61, 0.26);
 }
 
 @media (max-width: 768px) {
