@@ -1,17 +1,31 @@
-.body{
-    margin: 0;
-    padding: 0;
-}
+
 .myappointmentContainer{
-    padding: 0;
-    margin: 0;
-    background-image: url('../../../public/images/my_appointments.jpg');
+ background-image: url('../../../public/images/my_appointments.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
-z-index: -1;
+     z-index: -1;
     width: 100%;
+    height: 100%;
 }
+table {
+    margin: 300px 100px;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: white;
+  }
+
+
+  tr:nth-child(even) {
+    background-color: #0165a0a6;
+  }
