@@ -12,7 +12,7 @@ import Appointment from "./components/appointment/Appointment";
 import MainPage from "./components/pages/MainPage";
 import SingleDoctorPage from "./components/pages/SingleDoctorPage";
 import AddDoctorForm from "./components/doctor/form";
-import MyAppointment from "./components/navbar/MyAppointment";
+import MyAppointment from "./components/appointment/MyAppointment";
 import DeleteDoctor from "./components/navbar/DeleteForm";
 
 export const router = createBrowserRouter(
