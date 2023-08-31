@@ -14,6 +14,7 @@ import SingleDoctorPage from "./components/pages/SingleDoctorPage";
 import AddDoctorForm from "./components/doctor/form";
 import MyAppointment from "./components/navbar/MyAppointment";
 import DoctorsList from "./components/doctor/doctor_list";
+import Login from "./components/login/login";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +25,7 @@ export const router = createBrowserRouter(
       <Route path="/add-doctor" element={<AddDoctorForm />} />
       <Route path="/doctors/:id" element={<SingleDoctorPage />} />
       <Route path="/appointment" element={<Appointment />} />
+      <Route path="/login" element={<Login />} />
     </Route>
   )
 );
