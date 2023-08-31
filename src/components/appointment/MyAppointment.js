@@ -2,14 +2,15 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAppointment } from '../../redux/appointmentSlice';
 import s from './myappointment.module.scss';
+import { getDoctorList } from '../../redux/doctor_list_slice';
 
 export default function MyAppointment() {
   const { appointmentlists } = useSelector(((state) => state.appointment));
-
+  const { list } = useSelector((state) => state.doctorList);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAppointment());
-    console.log(appointmentlists);
+    dispatch(getDoctorList());
   }, [dispatch]);
   return (
     <div className={s.myappointmentContainer}>
@@ -23,11 +24,11 @@ export default function MyAppointment() {
             </tr>
           </thead>
           <tbody>
-            {appointmentlists.map((list) => (
-              <tr key={list.id}>
-                <td>{list.date}</td>
-                <td>{list.city}</td>
-                <td>{list.doctor_id}</td>
+            {appointmentlists.map((l) => (
+              <tr key={l.id}>
+                <td>{l.date}</td>
+                <td>{l.city}</td>
+                <td>{list.find((item) => item.id === l.doctor_id)?.name}</td>
               </tr>
             ))}
           </tbody>
