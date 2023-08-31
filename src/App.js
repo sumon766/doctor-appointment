@@ -8,7 +8,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import RootLayout from "./Layout/RootLayout";
-import Appointment from "./components/pages/Appointment";
+import Appointment from "./components/appointment/Appointment";
 import MainPage from "./components/pages/MainPage";
 import SingleDoctorPage from "./components/pages/SingleDoctorPage";
 import AddDoctorForm from "./components/doctor/form";
