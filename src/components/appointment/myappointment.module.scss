@@ -1,39 +1,39 @@
 
-.myappointmentContainer{
- background-image: url('../../../public/images/my_appointments.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-     z-index: -1;
-    width: 100%;
-    height: 100%;
+.myappointmentContainer {
+  background-image: url('../../../public/images/my_appointments.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
+
 table {
-    margin: 300px 50px;
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #ddd;
-  }
+  margin: 300px 50px;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
 
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-    color: white;
-  }
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  color: white;
+}
 
+tr:nth-child(even) {
+  background-color: hsla(202, 76%, 55%, 0.651);
+}
 
-  tr:nth-child(even) {
-    background-color: hsla(202, 76%, 55%, 0.651);
+@media (max-width: 768px) {
+  .myappointmentContainer {
+    display: flex;
+    margin: 0;
+    padding: 0;
   }
-  @media (max-width: 768px)
-  {
-    .myappointmentContainer{
-        display: flex;
-        margin: 0;
-        padding: 0;
-    }
-  }
+}
