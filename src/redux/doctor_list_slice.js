@@ -17,6 +17,9 @@ export const deleteDoctor = createAsyncThunk('doctorLists/deleteDoctor', async (
   try {
     const response = await fetch(`http://localhost:3000/api/v1/doctors/${id}`, {
       method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
     }).then((response) => response.json());
     return response;
   } catch (error) {
@@ -74,10 +77,10 @@ const doctorListSlice = createSlice({
     );
     builder.addCase(
       deleteDoctor.fulfilled,
-      (state, action) => {
-        // eslint-disable-next-line no-param-reassign
-        state.list = action.payload;
-      },
+      // (state, action) => {
+      //   // eslint-disable-next-line no-param-reassign
+      //   // state.list = action.payload;
+      // },
     );
     builder.addCase(
       deleteDoctor.rejected,
@@ -89,5 +92,5 @@ const doctorListSlice = createSlice({
   },
 });
 
-export const { setDoctorLists } = doctorListSlice.actions;
+export const doctorSliceActions = doctorListSlice.actions;
 export default doctorListSlice.reducer;

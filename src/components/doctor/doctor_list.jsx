@@ -12,6 +12,7 @@ const DoctorsList = () => {
 
   const hundleDelete = (id) => {
     dispatch(deleteDoctor(id));
+    dispatch(getDoctorList());
   };
 
   return (
