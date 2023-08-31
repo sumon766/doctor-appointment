@@ -14,11 +14,9 @@ import SingleDoctorPage from "./components/pages/SingleDoctorPage";
 import AddDoctorForm from "./components/doctor/form";
 
 import MyAppointment from "./components/appointment/MyAppointment";
-import DeleteDoctor from "./components/navbar/DeleteForm";
 
 import DoctorsList from "./components/doctor/doctor_list";
 import Login from "./components/login/login";
-
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
