@@ -1,0 +1,96 @@
+
+.doctors-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-color: white;
+  padding: 0;
+
+  table {
+    width: 90%;
+  }
+
+  thead {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+
+  tr {
+    border-bottom: 1px solid gray;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #f5f5f5;
+  }
+
+  tr:nth-child(even) {
+    background-color: #fff;
+  }
+
+  td {
+    vertical-align: middle;
+    padding: 10px;
+    text-align: center;
+  }
+
+  button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    background-color: rgb(237, 47, 47);
+    color: white;
+  }
+
+  button:hover {
+    background-color: rgb(255, 0, 0);
+  }
+
+  img {
+    border-radius: 50%;
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+.doctors-list-item {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: white;
+  border-bottom: 1px solid gray;
+}
+
+.doctors-list li {
+  margin-bottom: 1rem;
+}
+
+.doctors-list .checkbox {
+  margin-right: 1rem;
+}
+
+.doctors-list h3 {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  table {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .doctors-list-item {
+    width: 100%;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+}
