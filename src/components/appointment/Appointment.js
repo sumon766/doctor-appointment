@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import s from "../pages/MainPage.module.scss";
 import "./Appointment.css";
 
+import { getDoctorList } from "../../redux/doctor_list_slice";
+
 function Appointment() {
-  const doctorNames = ["John Doe", "Jane Doe", "Dr. Smith", "Dr. Johnson"];
   const cityNames = ["New York", "California", "Alaska", "San Francisco"];
 
+  const { list } = useSelector((state) => state.doctorList);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getDoctorList());
+  }, [dispatch]);
   return (
     <div className={`${s["main-page"]} row`}>
       <div className={s["side-menu"]} />
@@ -26,9 +33,9 @@ function Appointment() {
               <form className="form">
                 <select id="doctor">
                   <option value="">Select a doctor</option>
-                  {doctorNames.map((doctor) => (
-                    <option key={doctor} value={doctor}>
-                      {doctor}
+                  {list && list.map((doctor) => (
+                    <option key={doctor.id} value={doctor.id}>
+                      {doctor.name}
                     </option>
                   ))}
                 </select>
