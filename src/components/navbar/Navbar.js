@@ -17,10 +17,10 @@ const Navbar = () => {
 
   const navLinks = [
     { to: "/", text: "Doctor" },
-    { to: "/appointment", text: "Appointment" },
+    { to: "/appoint", text: "Appoint" },
     { to: "/my_appointments", text: "My Appointments" },
     { to: "/add-doctor", text: "Add Doctor" },
-    { to: "/delete_doctor", text: "Delete Doctor" },
+    { to: "/delete-doctor", text: "Delete Doctor" },
   ];
 
   return (
