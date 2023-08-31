@@ -29,3 +29,10 @@ table {
   tr:nth-child(even) {
     background-color: #0165a0a6;
   }
+  @media (max-width: 768px)
+  {
+    .myappointmentContainer{
+        display: flex;
+        margin: 0;
+    }
+  }
