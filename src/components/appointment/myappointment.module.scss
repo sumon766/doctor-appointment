@@ -1,0 +1,17 @@
+.body{
+    margin: 0;
+    padding: 0;
+}
+.myappointmentContainer{
+    padding: 0;
+    margin: 0;
+    background-image: url('../../../public/images/my_appointments.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+z-index: -1;
+    width: 100%;
+}
