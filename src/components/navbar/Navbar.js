@@ -17,7 +17,7 @@ const Navbar = () => {
 
   const navLinks = [
     { to: "/", text: "Doctor" },
-    { to: "/appoint", text: "Appoint" },
+    { to: "/appointment", text: "Appointment" },
     { to: "/my_appointments", text: "My Appointments" },
     { to: "/add-doctor", text: "Add Doctor" },
     { to: "/login", text: "Login" },
