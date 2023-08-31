@@ -20,6 +20,7 @@ const Navbar = () => {
     { to: "/appoint", text: "Appoint" },
     { to: "/my_appointments", text: "My Appointments" },
     { to: "/add-doctor", text: "Add Doctor" },
+    { to: "/login", text: "Login" },
     { to: "/delete-doctor", text: "Delete Doctor" },
   ];
 
