@@ -91,6 +91,10 @@
   cursor: pointer;
 }
 
+.reserve-button button:hover {
+  background-color: #232323;
+}
+
 .reserve-button button i {
   margin: 0 8px;
   font-size: 16px;
