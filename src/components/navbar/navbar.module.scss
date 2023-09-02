@@ -20,6 +20,14 @@ a:hover {
 .nav-btn {
   display: none;
 }
+nav{
+
+  padding:20px;
+  background-color: hsla(197, 72%, 52%, 0.576);
+  border-radius: 25px;
+  z-index: 1;
+}
+
 
 @media (max-width: 768px) {
   .nav-btn {

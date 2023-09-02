@@ -37,6 +37,7 @@
   padding: 10px;
   box-sizing: border-box;
   box-shadow: none;
+  
 }
 
 .doctor__content__item:hover {
@@ -103,15 +104,19 @@
 }
 
 @media (max-width: 1024px) {
+
   .doctor__content__item__img img {
     border-radius: 50%;
     width: 180px;
+   
   }
 }
 
 @media (max-width: 768px) {
   .doctor__content {
     flex-direction: column;
+    z-index: 0;
+    
   }
 
   .doctor__content__item {
