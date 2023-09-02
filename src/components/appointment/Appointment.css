@@ -4,11 +4,11 @@
   background-image: url('../../background.jpg');
   background-size: cover;
   background-position: center;
- 
   display: flex;
   align-items: center;
   position: relative;
-  z-index: -12;
+  height: 100vh;
+  z-index: 0;
 }
 
 .appointment {
@@ -77,7 +77,7 @@
 @media (max-width: 768px) {
   .appointment-content {
     padding: 10px;
-    z-index: 2;
+    z-index: -1;
   }
 
   .appointment-content h2 {

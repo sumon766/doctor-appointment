@@ -12,30 +12,27 @@
 }
 
 .appontmentsTable table {
- 
   margin: 350px 50px;
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
+
   th,
-td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-  color: white;
-}
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: white;
+  }
 
-tr:nth-child(even) {
-  background-color: rgba(11, 50, 61, 0.26);
+  tr:nth-child(even) {
+    background-color: rgba(11, 50, 61, 0.26);
+  }
 }
-}
-
-
 
 @media (max-width: 768px) {
- th,td{
-
-  width:70px;
- }
-
+  th,
+  td {
+    width: 70px;
+  }
 }
