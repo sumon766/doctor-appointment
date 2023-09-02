@@ -7,7 +7,6 @@
   display: flex;
   align-items: center;
   position: relative;
-  height: 100vh;
   z-index: 0;
 }
 
@@ -74,8 +73,15 @@
   cursor: pointer;
 }
 
+@media (min-width: 1024px) {
+  .appointment-page {
+    height: 100vh;
+  }
+}
+
 @media (max-width: 768px) {
   .appointment-content {
+    margin: 0 100px;
     padding: 10px;
     z-index: -1;
   }
