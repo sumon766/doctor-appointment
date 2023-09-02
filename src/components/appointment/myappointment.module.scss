@@ -11,30 +11,31 @@
   height: 100%;
 }
 
-table {
+.appontmentsTable table {
+ 
   margin: 350px 50px;
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
-}
-
-th,
+  th,
 td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
   color: white;
-  width: 150px;
 }
 
 tr:nth-child(even) {
   background-color: rgba(11, 50, 61, 0.26);
 }
+}
+
+
 
 @media (max-width: 768px) {
-  .myappointmentContainer {
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
+ th,td{
+
+  width:70px;
+ }
+
 }

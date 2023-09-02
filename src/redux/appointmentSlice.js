@@ -8,9 +8,20 @@ export const fetchAppointment = createAsyncThunk('Appointment/fetchAppointment',
       const data = await response.data;
       return data;
     } catch {
-      return thunkAPI.rejectWithValue('Failed to fetch a random message');
+      return thunkAPI.rejectWithValue('Failed to fetch appointments');
     }
   });
+
+export const addAppointment = createAsyncThunk('Appointment/addAppointment',
+  async (newAppointment, thunkAPI) => {
+    try {
+      const response = await axios.post('http://localhost:3000/api/v1/appointments', newAppointment);
+      return response.data;
+    } catch {
+      return thunkAPI.rejectWithValue('Failed to add new appointment');
+    }
+  }
+);
 
 const initialState = {
   appointmentlists: [],
@@ -33,6 +44,18 @@ const appointmentSlice = createSlice({
         state.error = action.payload;
       })
       .addCase(fetchAppointment.fulfilled, (state, action) => {
+        state.loading = false;
+        state.appointmentlists = action.payload;
+      })
+      .addCase(addAppointment.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(addAppointment.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+      .addCase(addAppointment.fulfilled, (state, action) => {
         state.loading = false;
         state.appointmentlists = action.payload;
       });
