@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin-top: 60px;
 }
 
 .single-doctor-img {
@@ -89,6 +90,10 @@
   color: #fff;
   font-weight: 600;
   cursor: pointer;
+}
+
+.reserve-button button:hover {
+  background-color: #232323;
 }
 
 .reserve-button button i {

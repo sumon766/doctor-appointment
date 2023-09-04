@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -56,7 +57,9 @@ const Doctor = () => {
                   <img src={item.photo_url} alt="not found" />
                 </div>
                 <div className="doctor__content__item__text">
-                  <h3>{item.name}</h3>
+                  <h3>
+                    <Link to={`/doctors/${item.id}`}>{item.name}</Link>
+                  </h3>
                   <p>{item.description}</p>
                 </div>
               </div>
