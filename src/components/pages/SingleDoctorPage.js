@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import s from "./MainPage.module.scss";
 import './SingleDoctorPage.css';
 import { addAppointment } from "../../redux/appointmentSlice";
-import { useNavigate } from "react-router-dom";
 
 function SingleDoctorPage() {
   const { id } = useParams();
   const [doctorData, setDoctorData] = useState(null);
   const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const cityNames = ["New York", "California", "Alaska", "San Francisco"];
-const randomIndex = Math.floor(Math.random() * cityNames.length);
+  const randomIndex = Math.floor(Math.random() * cityNames.length);
   const randomCity = cityNames[randomIndex];
 
   useEffect(() => {
@@ -28,7 +27,7 @@ const randomIndex = Math.floor(Math.random() * cityNames.length);
     dispatch(addAppointment({
       user_id: user.id, doctor_id: parseFloat(id), city: randomCity, date: new Date()
     }));
-    navigate('/my_appointments')
+    navigate('/my_appointments');
   };
 
   return (
