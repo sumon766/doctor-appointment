@@ -1,0 +1,80 @@
+div.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: hsla(197, 78%, 47%, 0.576);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: rgba(14, 128, 42, 0.823);
+
+  .login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    gap: 15px;
+    padding: 30px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(6, 155, 43, 0.3);
+
+    .login_title {
+      margin-bottom: 2rem;
+      color: rgba(14, 128, 42, 0.823);
+    }
+
+    .login-input {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 1rem;
+      padding: 0 10px;
+      border: 1px solid rgba(6, 155, 43, 0.3);
+      border-radius: 5px;
+      outline: none;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+
+      &:focus {
+        border-color: rgba(14, 128, 42, 0.823);
+      }
+    }
+
+    .login-button {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: rgba(14, 128, 119, 0.823);
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: rgba(4, 111, 31, 0.864);
+      }
+    }
+
+    .login-link {
+      text-decoration: none;
+      color: rgba(14, 128, 42, 0.823);
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #555;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .login-content {
+    width: 300px !important;
+  }
+}
