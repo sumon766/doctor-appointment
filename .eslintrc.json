@@ -24,7 +24,8 @@
     "import/no-unresolved": "off",
     "no-shadow": "off",
     "quotes": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "comma-dangle": "off"
   },
   "overrides": [
     {

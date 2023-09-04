@@ -1,17 +1,42 @@
 import React from "react";
 import "./login.scss";
 import { toast } from "react-toastify";
-// import useAxios from "../../hooks/useAxios";
+import useAxios from "../../hooks/useAxios";
 
 function Login() {
-  // const { axios } = useAxios();
+  const { axios } = useAxios();
+  const signIn = async (data) => {
+    try {
+      const res = await axios({
+        method: "post",
+        url: "/user/12345",
+        data,
+      });
+
+      console.log(res);
+      toast.success("Logged in successfully");
+    } catch (error) {
+      toast.error(error.response.data || "Unexpected error");
+    }
+  };
 
   const submitHandler = (e) => {
-    const username = e.target.value?.username;
-    const password = e.target.value?.password;
+    e.preventDefault();
+    const username = e.target.username?.value;
+    const password = e.target.password?.value;
+
     if (!username || !password) {
       toast.error("Both username and password are required.");
     }
+    console.log("VALUES: ", username, password);
+
+    // Sign in to backend
+    signIn({
+      user: {
+        username,
+        password,
+      },
+    });
   };
   return (
     <div className="login">
@@ -26,12 +51,14 @@ function Login() {
               className="login-input"
               placeholder="Enter your username..."
             />
+          </div>
+          <div className="login_form_input">
             <input
               type="password"
               name="password"
               id="password"
               className="login-input"
-              placeholder="..."
+              placeholder="Password"
             />
           </div>
           <div className="login_form_input">
