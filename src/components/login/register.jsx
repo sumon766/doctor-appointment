@@ -2,11 +2,14 @@ import React from "react";
 import "./login.scss";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { useNavigate } from "react-router";
 import useAxios from "../../hooks/useAxios";
 import { authActions } from "../../redux/authSlice";
 
 function Register() {
   const { axios } = useAxios();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const registerFun = async (data) => {
     try {
@@ -16,12 +19,17 @@ function Register() {
         data,
       });
 
-      console.log("REGISTERED USER RES::", res.data.user);
-      localStorage?.setItem("user", JSON.stringify(res?.data?.user));
-      dispatch(authActions.login(res?.data?.user));
+      console.log("REGISTERED USER RES::", res.data.status?.data);
+      localStorage?.setItem(
+        "curr_user",
+        JSON.stringify(res?.data?.status.data)
+      );
+      dispatch(authActions.login(res?.data?.status.data));
       toast.success("Registered successfully");
+      navigate("/");
     } catch (error) {
-      toast.error("Unexpected error");
+      console.log(error);
+      toast.error(error.response.data?.status?.message || "Unexpected error");
     }
   };
 
