@@ -36,8 +36,11 @@ const Navbar = () => {
         onClick={toggleNavbar}
         type="button"
       >
-        {isNavOpen ? <FontAwesomeIcon icon={faTimes} />
-          : <FontAwesomeIcon icon={faBarsStaggered} className="bar-custom-icon" />}
+        <FontAwesomeIcon
+          icon={isNavOpen ? faTimes : faBarsStaggered}
+          className={`navbar-icon ${isNavOpen ? 'open' : ''}`}
+        />
+
       </button>
       <nav className={isNavOpen ? s["mobile-navbar"] : s["desktop-navbar"]}>
         {navLinks.map((link) => (

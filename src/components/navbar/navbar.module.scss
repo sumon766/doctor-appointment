@@ -23,15 +23,22 @@ a:hover {
 
 nav {
   padding: 20px;
-  background-color: hsla(197, 66%, 64%, 0.576);
+ 
   border-radius: 25px;
   z-index: 20;
 }
 
 @media (max-width: 768px) {
+  nav{
+    background-color: hsla(197, 66%, 64%, 0.576);
+  }
+
   .nav-btn {
     display: block;
+    background: none;
+    border: none;
   }
+  
 
   nav.desktop-navbar {
     display: none;
