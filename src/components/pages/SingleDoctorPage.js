@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import s from "./MainPage.module.scss";
 import './SingleDoctorPage.css';
+import { addAppointment } from "../../redux/appointmentSlice";
 
 function SingleDoctorPage() {
   const { id } = useParams();
   const [doctorData, setDoctorData] = useState(null);
+  const { user } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+
+  const cityNames = ["New York", "California", "Alaska", "San Francisco"];
+
+
+  const randomIndex = Math.floor(Math.random() * cityNames.length);
+  const randomCity = cityNames[randomIndex];
 
   useEffect(() => {
     fetch(`http://localhost:3000/api/v1/doctors/${id}`)
@@ -14,6 +24,11 @@ function SingleDoctorPage() {
         setDoctorData(data);
       });
   }, [id]);
+  const handleClick = () => {
+    dispatch(addAppointment({
+      user_id: user.id, doctor_id: parseFloat(id), city: randomCity, date: new Date()
+    }));
+  };
 
   return (
     <div className={`${s["main-page"]} row`}>
@@ -57,7 +72,7 @@ function SingleDoctorPage() {
                 </a>
               </div>
               <div className="reserve-button">
-                <button type="button">
+                <button type="button" onClick={handleClick}>
                   <i className="fa fa-cog" aria-hidden="true" />
                   Reserve
                   <i className="fa fa-angle-right" aria-hidden="true" />

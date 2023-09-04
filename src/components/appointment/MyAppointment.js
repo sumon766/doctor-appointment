@@ -5,7 +5,7 @@ import s from './myappointment.module.scss';
 import { getDoctorList } from '../../redux/doctor_list_slice';
 
 export default function MyAppointment() {
-  const { appointmentlists } = useSelector(((state) => state.appointment));
+  const { appointmentlists, error, loading } = useSelector(((state) => state.appointment));
   const { list } = useSelector((state) => state.doctorList);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -15,6 +15,7 @@ export default function MyAppointment() {
   return (
     <div className={s.myappointmentContainer}>
       <div className={s.appontmentsTable}>
+        { !loading && !error && (
         <table>
           <thead>
             <tr>
@@ -24,17 +25,19 @@ export default function MyAppointment() {
             </tr>
           </thead>
           <tbody>
-            {appointmentlists.map((l) => (
-              <tr key={l.id}>
-                <td>{l.date}</td>
-                <td>{l.city}</td>
-                <td>{list.find((item) => item.id === l.doctor_id)?.name}</td>
-              </tr>
-            ))}
+            {
+              appointmentlists.map((l) => (
+                <tr key={l.id}>
+                  <td>{l.date}</td>
+                  <td>{l.city}</td>
+                  <td>{list.find((item) => item.id === l.doctor_id)?.name}</td>
+                </tr>
+              ))
+            }
           </tbody>
         </table>
+        )}
       </div>
-
     </div>
   );
 }

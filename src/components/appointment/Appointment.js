@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 import s from "../pages/MainPage.module.scss";
 import "./Appointment.css";
 import { addAppointment } from "../../redux/appointmentSlice";
@@ -8,8 +9,10 @@ import { getDoctorList } from "../../redux/doctor_list_slice";
 
 function Appointment() {
   const cityNames = ["New York", "California", "Alaska", "San Francisco"];
-
+  const navigate = useNavigate();
   const { list } = useSelector((state) => state.doctorList);
+
+  const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getDoctorList());
@@ -19,9 +22,12 @@ function Appointment() {
     event.preventDefault();
     const city = document.getElementById('city').value;
     const date = document.getElementById('date').value;
-
+    const userId = user.id;
     const doctorId = document.getElementById('doctor').value;
-    dispatch(addAppointment({ city, date, doctor_id: doctorId }));
+    dispatch(addAppointment({
+      user_id: userId, city, date, doctor_id: doctorId
+    }));
+    navigate('/my_appointments');
   };
   return (
     <div className={`${s["main-page"]} row`}>
