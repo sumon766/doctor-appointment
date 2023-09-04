@@ -9,7 +9,7 @@ a {
   text-decoration: none;
   font-weight: bolder;
   font-size: larger;
-  color: black;
+  color: rgba(29, 15, 15, 0.623);
 }
 
 a:hover {
@@ -19,6 +19,13 @@ a:hover {
 
 .nav-btn {
   display: none;
+}
+
+nav {
+  padding: 20px;
+  background-color: hsla(197, 66%, 64%, 0.576);
+  border-radius: 25px;
+  z-index: 20;
 }
 
 @media (max-width: 768px) {

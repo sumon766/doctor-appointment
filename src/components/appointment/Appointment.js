@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import s from "../pages/MainPage.module.scss";
 import "./Appointment.css";
+import { addAppointment } from "../../redux/appointmentSlice";
+
+import { getDoctorList } from "../../redux/doctor_list_slice";
 
 function Appointment() {
-  const doctorNames = ["John Doe", "Jane Doe", "Dr. Smith", "Dr. Johnson"];
   const cityNames = ["New York", "California", "Alaska", "San Francisco"];
 
+  const { list } = useSelector((state) => state.doctorList);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getDoctorList());
+  }, [dispatch]);
+
+  const Appoint = async (event) => {
+    event.preventDefault();
+    const city = document.getElementById('city').value;
+    const date = document.getElementById('date').value;
+
+    const doctorId = document.getElementById('doctor').value;
+    dispatch(addAppointment({ city, date, doctor_id: doctorId }));
+  };
   return (
     <div className={`${s["main-page"]} row`}>
       <div className={s["side-menu"]} />
@@ -23,12 +40,12 @@ function Appointment() {
               remaining essentially unchanged.
             </p>
             <div className="appointment-form">
-              <form className="form">
+              <form className="form" onSubmit={Appoint}>
                 <select id="doctor">
                   <option value="">Select a doctor</option>
-                  {doctorNames.map((doctor) => (
-                    <option key={doctor} value={doctor}>
-                      {doctor}
+                  {list && list.map((doctor) => (
+                    <option key={doctor.id} value={doctor.id}>
+                      {doctor.name}
                     </option>
                   ))}
                 </select>
