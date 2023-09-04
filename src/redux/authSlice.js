@@ -2,7 +2,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const getUser = () => {
-  const existingUser = localStorage?.getItem("user");
+  const existingUser = localStorage?.getItem("curr_user");
   if (existingUser) {
     return JSON.parse(existingUser);
   }

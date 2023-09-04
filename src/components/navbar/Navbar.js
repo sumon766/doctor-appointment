@@ -36,7 +36,7 @@ const Navbar = () => {
     navigate("/login");
     // logout from API
     // apiLogout();
-    localStorage?.removeItem("user");
+    localStorage?.removeItem("curr_user");
   };
 
   const navLinks = [
