@@ -12,9 +12,6 @@ function SingleDoctorPage() {
       .then((response) => response.json())
       .then((data) => {
         setDoctorData(data);
-      })
-      .catch((error) => {
-        console.error("Error fetching doctor data:", error);
       });
   }, [id]);
 
