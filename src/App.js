@@ -17,6 +17,7 @@ import MyAppointment from "./components/appointment/MyAppointment";
 
 import DoctorsList from "./components/doctor/doctor_list";
 import Login from "./components/login/login";
+import Register from "./components/login/register";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +29,7 @@ export const router = createBrowserRouter(
       <Route path="/doctors/:id" element={<SingleDoctorPage />} />
       <Route path="/appointment" element={<Appointment />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
     </Route>
   )
 );
