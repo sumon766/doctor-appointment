@@ -4,11 +4,10 @@
   background-image: url('../../background.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 .appointment {
@@ -74,9 +73,17 @@
   cursor: pointer;
 }
 
+@media (min-width: 1024px) {
+  .appointment-page {
+    height: 100vh;
+  }
+}
+
 @media (max-width: 768px) {
   .appointment-content {
+    margin: 0 100px;
     padding: 10px;
+    z-index: -1;
   }
 
   .appointment-content h2 {
