@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
+import { toast } from "react-toastify";
+
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import s from "../pages/MainPage.module.scss";
 import "./Appointment.css";
-import { addAppointment } from "../../redux/appointmentSlice";
+import { addAppointment, fetchAppointment } from "../../redux/appointmentSlice";
 
 import { getDoctorList } from "../../redux/doctor_list_slice";
 
@@ -20,13 +22,17 @@ function Appointment() {
 
   const Appoint = async (event) => {
     event.preventDefault();
+    if (!user) {
+      return toast.error("Hey,You must Login");
+    }
     const city = document.getElementById('city').value;
     const date = document.getElementById('date').value;
     const userId = user.id;
     const doctorId = document.getElementById('doctor').value;
-    dispatch(addAppointment({
+    await dispatch(addAppointment({
       user_id: userId, city, date, doctor_id: doctorId
     }));
+    await dispatch(fetchAppointment());
     navigate('/my_appointments');
   };
   return (

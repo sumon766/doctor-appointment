@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import s from "./MainPage.module.scss";
 import './SingleDoctorPage.css';
-import { addAppointment } from "../../redux/appointmentSlice";
+import { addAppointment, fetchAppointment } from "../../redux/appointmentSlice";
 
 function SingleDoctorPage() {
   const { id } = useParams();
@@ -23,10 +24,14 @@ function SingleDoctorPage() {
         setDoctorData(data);
       });
   }, [id]);
-  const handleClick = () => {
-    dispatch(addAppointment({
+  const handleClick = async () => {
+    if (!user) {
+      return toast.error("Hey,You must Login");
+    }
+    await dispatch(addAppointment({
       user_id: user.id, doctor_id: parseFloat(id), city: randomCity, date: new Date()
     }));
+    await dispatch(fetchAppointment());
     navigate('/my_appointments');
   };
 
@@ -37,7 +42,7 @@ function SingleDoctorPage() {
         {doctorData ? (
           <div className="single-doctor">
             <div className="single-doctor-img">
-              <img src={doctorData.photo_url || ""} alt={doctorData.name} />
+              <img src={doctorData.photo || ""} alt={doctorData.name} />
             </div>
             <div className="single-doctor-details">
               <div className="doctor-name">
