@@ -7,6 +7,8 @@ import s from './myappointment.module.scss';
 export default function MyAppointment() {
   const { appointmentlists, error, loading } = useSelector((state) => state.appointment);
   const { list } = useSelector((state) => state.doctorList);
+  const { user } = useSelector((state) => state.auth);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -28,7 +30,7 @@ export default function MyAppointment() {
             </thead>
             <tbody>
               {
-    appointmentlists?.map((l) => (
+    appointmentlists?.filter((l) => l.user_id === user.id).map((l) => (
       <tr key={l.id}>
         <td>{l.date}</td>
         <td>{l.city}</td>
