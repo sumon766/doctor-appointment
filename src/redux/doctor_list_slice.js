@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const initialState = {
   list: [],
@@ -8,13 +9,19 @@ export const getDoctorList = createAsyncThunk(
   "doctorLists/getDoctorList",
   async () => {
     try {
-      const response = await fetch(
-        "http://localhost:3000/api/v1/doctors/"
-      ).then((response) => response.json());
-      return response;
+      const response = await axios.get("http://localhost:3000/api/v1/doctors/");
+      return response.data;
     } catch (error) {
       return error.message;
     }
+    // try {
+    //   const response = await fetch(
+    //     "http://localhost:3000/api/v1/doctors/"
+    //   ).then((response) => response.json());
+    //   return response;
+    // } catch (error) {
+    //   return error.message;
+    // }
   }
 );
 

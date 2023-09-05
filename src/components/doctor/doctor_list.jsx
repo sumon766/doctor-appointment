@@ -10,8 +10,8 @@ const DoctorsList = () => {
     dispatch(getDoctorList());
   }, [dispatch]);
 
-  const hundleDelete = (id) => {
-    dispatch(deleteDoctor(id));
+  const hundleDelete = async (id) => {
+    await dispatch(deleteDoctor(id));
     dispatch(getDoctorList());
   };
 
