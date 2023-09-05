@@ -5,20 +5,26 @@ export const fetchAppointment = createAsyncThunk('Appointment/fetchAppointment',
   async (_, thunkAPI) => {
     try {
       const response = await axios.get('http://localhost:3000/api/v1/appointments');
-      const data = await response.data;
-      return data;
-    } catch {
-      return thunkAPI.rejectWithValue('Failed to fetch appointments');
+
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue({ errorMessage: 'Failed to fetch appointments', error });
     }
   });
 
 export const addAppointment = createAsyncThunk('Appointment/addAppointment',
-  async (newAppointment, thunkAPI) => {
+  async (newAppointment) => {
     try {
       const response = await axios.post('http://localhost:3000/api/v1/appointments', newAppointment);
+
+      console.log(response.data);
       return response.data;
-    } catch {
-      return thunkAPI.rejectWithValue('Failed to add new appointment');
+    } catch (error) {
+      // if (error.isAxiosError) {
+      //   console.error('Axios error details:', error.response); // Response details if available
+      //   console.error('Axios error message:', error.message); // Error message
+      //   console.error('Axios error code:', error.code);
+      return error;
     }
   }
 );
