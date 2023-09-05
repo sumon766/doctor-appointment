@@ -19,7 +19,6 @@ function Register() {
         data,
       });
 
-      console.log("REGISTERED USER RES::", res.data.status?.data);
       localStorage?.setItem(
         "curr_user",
         JSON.stringify(res?.data?.status.data)
@@ -28,7 +27,6 @@ function Register() {
       toast.success("Registered successfully");
       navigate("/");
     } catch (error) {
-      console.log(error);
       toast.error(error.response.data?.status?.message || "Unexpected error");
     }
   };

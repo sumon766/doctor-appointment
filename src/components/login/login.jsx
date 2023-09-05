@@ -9,7 +9,6 @@ import useAxios from "../../hooks/useAxios";
 import { authActions } from "../../redux/authSlice";
 
 function Login() {
-  // const { user } = useSelector((state) => state.auth);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { axios } = useAxios();
@@ -21,7 +20,6 @@ function Login() {
         data,
       });
 
-      console.log("SIGNED IN USER RES::", res.data.user);
       dispatch(authActions.login(res?.data?.user));
       localStorage?.setItem("curr_user", JSON.stringify(res?.data?.user));
       toast.success("Logged in successfully");

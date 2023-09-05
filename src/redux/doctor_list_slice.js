@@ -14,14 +14,6 @@ export const getDoctorList = createAsyncThunk(
     } catch (error) {
       return error.message;
     }
-    // try {
-    //   const response = await fetch(
-    //     "http://localhost:3000/api/v1/doctors/"
-    //   ).then((response) => response.json());
-    //   return response;
-    // } catch (error) {
-    //   return error.message;
-    // }
   }
 );
 
@@ -70,7 +62,6 @@ const doctorListSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getDoctorList.fulfilled, (state, action) => {
       // eslint-disable-next-line no-param-reassign
-      console.log("CHECK LIST:", action.payload);
 
       // eslint-disable-next-line no-param-reassign
       state.list = action.payload;
@@ -89,10 +80,6 @@ const doctorListSlice = createSlice({
     });
     builder.addCase(
       deleteDoctor.fulfilled
-      // (state, action) => {
-      //   // eslint-disable-next-line no-param-reassign
-      //   // state.list = action.payload;
-      // },
     );
     builder.addCase(deleteDoctor.rejected, (state, action) => {
       // eslint-disable-next-line no-param-reassign

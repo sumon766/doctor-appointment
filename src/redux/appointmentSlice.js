@@ -17,13 +17,8 @@ export const addAppointment = createAsyncThunk('Appointment/addAppointment',
     try {
       const response = await axios.post('http://localhost:3000/api/v1/appointments', newAppointment);
 
-      console.log(response.data);
       return response.data;
     } catch (error) {
-      // if (error.isAxiosError) {
-      //   console.error('Axios error details:', error.response); // Response details if available
-      //   console.error('Axios error message:', error.message); // Error message
-      //   console.error('Axios error code:', error.code);
       return error;
     }
   }
