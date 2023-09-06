@@ -22,7 +22,7 @@ import Register from "./components/login/register";
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
-      <Route path="/my_appointments" element={<MyAppointment />} />
+      <Route path="/my-appointments" element={<MyAppointment />} />
       <Route path="/delete-doctor" element={<DoctorsList />} />
       <Route index element={<MainPage />} />
       <Route path="/add-doctor" element={<AddDoctorForm />} />

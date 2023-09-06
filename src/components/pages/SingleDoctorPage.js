@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import s from "./MainPage.module.scss";
-import './SingleDoctorPage.css';
+import "./SingleDoctorPage.css";
 import { addAppointment, fetchAppointment } from "../../redux/appointmentSlice";
 
 function SingleDoctorPage() {
@@ -28,11 +28,16 @@ function SingleDoctorPage() {
     if (!user) {
       return toast.error("Hey,You must Login");
     }
-    await dispatch(addAppointment({
-      user_id: user.id, doctor_id: parseFloat(id), city: randomCity, date: new Date()
-    }));
+    await dispatch(
+      addAppointment({
+        user_id: user.id,
+        doctor_id: parseFloat(id),
+        city: randomCity,
+        date: new Date(),
+      })
+    );
     await dispatch(fetchAppointment());
-    navigate('/my_appointments');
+    navigate("/my-appointments");
   };
 
   return (
@@ -68,7 +73,9 @@ function SingleDoctorPage() {
                 </div>
               </div>
               <div className="representative-fee">
-                <p><b>5.9% APR Representative</b></p>
+                <p>
+                  <b>5.9% APR Representative</b>
+                </p>
               </div>
               <div className="discover-more">
                 <a href="https://github.com/">

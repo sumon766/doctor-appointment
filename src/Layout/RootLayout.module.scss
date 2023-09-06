@@ -1,0 +1,47 @@
+.root-wrapper {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+
+  .toggle-mobile-menu {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    z-index: 200;
+
+    @media (max-width: 768px) {
+      display: flex;
+      top: 10px;
+      left: 10px;
+
+      .icon-wrapper {
+        .icon {
+          font-size: 30px;
+          cursor: pointer;
+          color: #399650;
+        }
+      }
+    }
+  }
+
+  .main-content {
+    flex: 1;
+    // padding-top: 20px;
+  }
+}
+
+.sere-main-nav-wrapper {
+  height: 100%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.sere-mobile-nav-wrapper {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
