@@ -1,7 +1,10 @@
 import { useState } from "react";
 import "./form.scss";
+import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 const Form = () => {
+  const { user } = useSelector((state) => state.auth);
   const initialFormState = {
     name: "",
     photo: "",
@@ -17,8 +20,8 @@ const Form = () => {
   };
 
   const saveDoctor = (formData) => {
-    fetch('http://localhost:3000/api/v1/doctors', {
-      method: 'POST',
+    fetch("http://localhost:3000/api/v1/doctors", {
+      method: "POST",
       body: formData,
     })
       .then((response) => response.json())
@@ -29,6 +32,10 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (!user) return toast.error("You must login to add a doctor.");
+    if (!event.target.name?.value || !event.target.description?.value) {
+      return toast.error("Name and description cannot be empty.");
+    }
     const formData = new FormData();
     formData.append("doctor[name]", event.target.name.value);
     formData.append("doctor[photo]", event.target.photo.files[0]);
@@ -55,11 +62,9 @@ const Form = () => {
             <h4>Add New Doctor</h4>
             <form onSubmit={(e) => handleSubmit(e)}>
               <div className="form-group">
-
                 <input
                   type="text"
                   id="name"
-                  required
                   value={inputs.name}
                   onChange={handleChange}
                   name="name"
@@ -68,11 +73,9 @@ const Form = () => {
               </div>
 
               <div className="form-group">
-
                 <input
                   type="text"
                   id="description"
-                  required
                   value={inputs.description}
                   onChange={handleChange}
                   name="description"
@@ -81,12 +84,10 @@ const Form = () => {
               </div>
 
               <div className="form-group">
-
                 <label htmlFor="photo">
                   <input
                     type="file"
                     id="photo"
-                    required
                     value={inputs.photo}
                     onChange={handleChange}
                     name="photo"

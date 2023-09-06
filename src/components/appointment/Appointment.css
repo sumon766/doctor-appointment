@@ -1,7 +1,7 @@
 .appointment-page {
   margin: 0;
   padding: 0;
-  background-image: url('../../background.jpg');
+  background-image: url("../../background.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -45,7 +45,7 @@
 
 .appointment-form {
   margin-top: 30px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
 
@@ -83,7 +83,8 @@
   .appointment-content {
     margin: 0 100px;
     padding: 10px;
-    z-index: -1;
+
+    /* z-index: -1; */
   }
 
   .appointment-content h2 {

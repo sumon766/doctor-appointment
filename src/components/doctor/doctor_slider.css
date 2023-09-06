@@ -19,9 +19,19 @@
 }
 
 .doctor__content {
-  display: flex;
-  flex-direction: column;
-  column-gap: 20px;
+  max-width: 1000px;
+
+  @media (max-width: 768px) {
+    max-width: 600px;
+  }
+
+  @media (max-width: 500px) {
+    max-width: 500px;
+  }
+
+  @media (max-width: 400px) {
+    max-width: 400px;
+  }
 }
 
 .doctor__content__item {

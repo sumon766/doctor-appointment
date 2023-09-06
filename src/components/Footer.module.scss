@@ -1,9 +1,11 @@
-.footer {
-  padding: 6px 0;
-}
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
 
-@media (max-width: 768px) {
-  .footer-content {
-    display: none;
+  .icon {
+    font-size: 26px;
+    cursor: pointer;
   }
 }
