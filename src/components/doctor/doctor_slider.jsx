@@ -19,13 +19,13 @@ const Doctor = () => {
     autoplay: true,
     arrows: true,
     speed: 500,
-    slidesToShow: list.count > 3 ? 3 : 2,
+    slidesToShow: list.length <= 2 ? 1 : 3,
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 769,
         settings: {
-          slidesToShow: list.count > 2 ? 2 : 1,
+          slidesToShow: list.length <= 2 ? 1 : 2,
           arrows: false,
         },
       },
