@@ -37,17 +37,16 @@ function SingleDoctorPage() {
       })
     );
     await dispatch(fetchAppointment());
-    navigate("/my-appointments");
+    navigate("/appointment");
   };
 
   return (
     <div className={`${s["main-page"]} row`}>
-      <div className={s["side-menu"]}>Menu here</div>
       <div className={s["main-content"]}>
         {doctorData ? (
           <div className="single-doctor">
             <div className="single-doctor-img">
-              <img src={doctorData.photo || ""} alt={doctorData.name} />
+              <img src={doctorData.photo_url || ""} alt={doctorData.name} />
             </div>
             <div className="single-doctor-details">
               <div className="doctor-name">
