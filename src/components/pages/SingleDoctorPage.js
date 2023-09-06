@@ -6,7 +6,7 @@ import s from "./MainPage.module.scss";
 import "./SingleDoctorPage.css";
 import { addAppointment, fetchAppointment } from "../../redux/appointmentSlice";
 
-function SingleDoctorPage() {
+const SingleDoctorPage = () => {
   const { id } = useParams();
   const [doctorData, setDoctorData] = useState(null);
   const { user } = useSelector((state) => state.auth);
@@ -97,6 +97,6 @@ function SingleDoctorPage() {
       </div>
     </div>
   );
-}
+};
 
 export default SingleDoctorPage;

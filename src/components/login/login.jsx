@@ -8,7 +8,7 @@ import { useNavigate } from "react-router";
 import useAxios from "../../hooks/useAxios";
 import { authActions } from "../../redux/authSlice";
 
-function Login() {
+const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { axios } = useAxios();
@@ -79,6 +79,6 @@ function Login() {
       </div>
     </div>
   );
-}
+};
 
 export default Login;

@@ -1,9 +1,9 @@
 import React from "react";
-// import s from "./MainPage.module.scss";
 import Doctor from "../doctor/doctor_slider";
 
-function MainPage() {
+// eslint-disable-next-line arrow-body-style
+const MainPage = () => {
   return <Doctor />;
-}
+};
 
 export default MainPage;

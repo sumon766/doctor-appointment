@@ -4,7 +4,7 @@ import { getDoctorList } from "../../redux/doctor_list_slice";
 import { fetchAppointment } from "../../redux/appointmentSlice";
 import s from "./myappointment.module.scss";
 
-export default function MyAppointment() {
+const MyAppointment = () => {
   const { appointmentlists, error, loading } = useSelector(
     (state) => state.appointment
   );
@@ -48,4 +48,6 @@ export default function MyAppointment() {
       </div>
     </div>
   );
-}
+};
+
+export default MyAppointment;

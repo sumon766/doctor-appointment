@@ -2,7 +2,8 @@ import React from "react";
 import { BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
 import s from "./Footer.module.scss";
 
-export default function Footer() {
+// eslint-disable-next-line arrow-body-style
+const Footer = () => {
   return (
     <footer className={`${s["footer-content"]} row`}>
       <span className={s["social-links"]}>
@@ -12,4 +13,6 @@ export default function Footer() {
       </span>
     </footer>
   );
-}
+};
+
+export default Footer;

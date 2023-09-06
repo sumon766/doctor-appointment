@@ -9,7 +9,7 @@ import { addAppointment, fetchAppointment } from "../../redux/appointmentSlice";
 
 import { getDoctorList } from "../../redux/doctor_list_slice";
 
-function Appointment() {
+const Appointment = () => {
   const cityNames = ["New York", "California", "Alaska", "San Francisco"];
   const navigate = useNavigate();
   const { list } = useSelector((state) => state.doctorList);
@@ -90,6 +90,6 @@ function Appointment() {
       </div>
     </div>
   );
-}
+};
 
 export default Appointment;

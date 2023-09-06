@@ -8,7 +8,7 @@ import { HiX, HiMenuAlt1 } from "react-icons/hi";
 import s from "./RootLayout.module.scss";
 import NavContainer from "./NavContainer";
 
-function RootLayout() {
+const RootLayout = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isAppointmentPage = location.pathname === "/appointment";
@@ -49,6 +49,6 @@ function RootLayout() {
       </div>
     </div>
   );
-}
+};
 
 export default RootLayout;

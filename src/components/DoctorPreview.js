@@ -2,7 +2,7 @@
 import React from "react";
 import s from "./DoctorPreview.module.scss";
 
-function DoctorPreview(props) {
+const DoctorPreview = (props) => {
   const { name, image, description } = props;
   return (
     <div className={s.preview}>
@@ -15,6 +15,6 @@ function DoctorPreview(props) {
       </div>
     </div>
   );
-}
+};
 
 export default DoctorPreview;

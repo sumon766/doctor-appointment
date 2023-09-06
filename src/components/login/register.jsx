@@ -7,7 +7,7 @@ import { useNavigate } from "react-router";
 import useAxios from "../../hooks/useAxios";
 import { authActions } from "../../redux/authSlice";
 
-function Register() {
+const Register = () => {
   const { axios } = useAxios();
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -103,6 +103,6 @@ function Register() {
       </div>
     </div>
   );
-}
+};
 
 export default Register;

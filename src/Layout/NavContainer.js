@@ -3,8 +3,8 @@ import Footer from "../components/Footer";
 import Navbar from "../components/navbar/Navbar";
 import s from "./NavContainer.module.scss";
 
-// eslint-disable-next-line react/prop-types
-export default function NavContainer({ setMobileMenuOpen }) {
+// eslint-disable-next-line react/prop-types, arrow-body-style
+const NavContainer = ({ setMobileMenuOpen }) => {
   return (
     <div className={s["navbar-container"]}>
       <Navbar setMobileMenuOpen={setMobileMenuOpen} />
@@ -13,4 +13,6 @@ export default function NavContainer({ setMobileMenuOpen }) {
       </div>
     </div>
   );
-}
+};
+
+export default NavContainer;
