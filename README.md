@@ -8,6 +8,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [kanban Board](#kanban-board)
   - [🎬 Representation](#representation)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -46,7 +47,7 @@
 </details>
 
 <!-- Features -->
-### Kanban Board
+### Kanban Board <a id="kanban-board"></a>
 
 - Link to frontend-kanban link [Kanban Board](https://github.com/users/sumon766/projects/3)
 - Link to initial kanban screenshot
