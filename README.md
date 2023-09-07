@@ -46,7 +46,18 @@
 </details>
 
 <!-- Features -->
+### Kanban Board
 
+- Link to frontend-kanban link [Kanban Board](https://github.com/users/sumon766/projects/3)
+- Link to initial kanban screenshot
+  ![front-end-kanaban-board](https://github.com/sumon766/frontend-doctor-appointment/assets/108110651/13db5c81-cee7-4479-a526-14d8f7f88461)
+
+- Link to final kanban screenshot
+![Screenshot from 2023-09-07 06-08-41](https://github.com/sumon766/frontend-doctor-appointment/assets/86189460/97b17c7c-5ec4-4e33-83ef-3790331795fe)
+
+- Link to final GH repository  [Latest frontend](https://github.com/sumon766/frontend-doctor-appointment/tree/main)
+     
+    
 ### Key Features <a id="key-features"></a>
 
 - **Ability to see the Available Doctors in the homepage**
