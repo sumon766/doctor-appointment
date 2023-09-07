@@ -1,70 +1,206 @@
-# Getting Started with Create React App
+# Doctor Appointment (Final Capstone)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<a id="readme-top"></a>
 
-## Available Scripts
+# 📗 Table of Contents
 
-In the project directory, you can run:
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+    - [kanban Board](#kanban-board)
+  - [🎬 Representation](#representation)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-### `npm start`
+<!-- PROJECT DESCRIPTION -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 📖 Doctor Appointment <a id="about-project"></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**The Doctor Appointment** A website offers a user-friendly platform for patients to register, log in, set appointments, check doctor profiles, and manage their appointments. Admins can effortlessly add or delete doctors and monitor the platform, ensuring seamless healthcare access and efficient management.
 
-### `npm test`
+## Backened Repository 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  [Backened Repo](https://github.com/sumon766/frontend-doctor-appointment)
 
-### `npm run build`
+## 🛠 Built With <a id="built-with"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Tech Stack <a id="tech-stack"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<details>
+  <summary>React</summary>
+  <ul>
+    <li><a>https://rubyonrails.org/</a></li>
+    <li><a>https://react.dev/</a></li>
+  </ul>
+</details>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- Features -->
+### Kanban Board <a id="kanban-board"></a>
 
-### `npm run eject`
+- Link to frontend-kanban link [Kanban Board](https://github.com/users/sumon766/projects/3)
+- Link to initial kanban screenshot
+  ![front-end-kanaban-board](https://github.com/sumon766/frontend-doctor-appointment/assets/108110651/13db5c81-cee7-4479-a526-14d8f7f88461)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Link to final kanban screenshot
+![Screenshot from 2023-09-07 06-08-41](https://github.com/sumon766/frontend-doctor-appointment/assets/86189460/97b17c7c-5ec4-4e33-83ef-3790331795fe)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Link to final GH repository  [Latest frontend](https://github.com/sumon766/frontend-doctor-appointment/tree/main)
+     
+    
+### Key Features <a id="key-features"></a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Ability to see the Available Doctors in the homepage**
+- **The ability to Make appointment based by selecting the city, doctor and date**
+- **The ability to add Doctors the the database**
+- **The ability to delete Doctor and make them unavailable to reserve**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- ## 🎬 Representaition <a id="representation"></a> -->
 
-### Analyzing the Bundle Size
+<!-- not added -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-### Making a Progressive Web App
+<!-- GETTING STARTED -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 💻 Getting Started <a id="getting-started"></a>
 
-### Advanced Configuration
+To get a local copy up and running, follow these steps.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Prerequisites
 
-### Deployment
+In order to run this project you need:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Install React
+- Install React Router Dom
+- Install Redux
+- Install Redux toolkit
 
-### `npm run build` fails to minify
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Setup
+
+Clone this repository to your desired folder:
+
+```
+  git clone git@github.com:sumon766/frontend-doctor-appointment.git
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Install
+
+Install this project with:
+
+```
+  cd frontend-doctor-appointment
+  npm install
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Usage
+
+To run the project, execute the following command:
+
+```
+  npm start
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ### Deployment <a id="triangular_flag_on_post-deployment"></a>
+
+- [N/A]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+
+<!-- AUTHORS -->
+
+## 👥 Author <a id="authors"></a>
+
+👤 **Abdi Bekele**
+
+- GitHub: [@githubhandle](https://github.com/Lul-Abdifan)
+- Twitter: [@twitterhandle](https://twitter.com/AbdiBekele68808)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdi-bekele-a63860254/)
+
+👤 **James Serengia**
+
+- GitHub: [@githubhandle](https://github.com/serengia)
+- Website: [James Serengia](https://jamesserengia.com/)
+- Twitter: [@twitterhandle](https://twitter.com/jamesserengia)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/james-serengia)
+
+👤 **Mursedul Islam Sumon**
+
+- GitHub: [@githubhandle](https://github.com/sumon766)
+- Twitter: [@twitterhandle](https://twitter.com/sumon766)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/sumon766)
+
+👤 **Basir Elham**
+
+- GitHub: [@Elhambasir](https://github.com/Elhambasir)
+- LinkedIn: [@Basirelham](https://www.linkedin.com/in/basirelhamahmadi/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a id="future-features"></a>
+
+- [ ] **Doctor Availability**
+- [ ] **Add Dark Mode**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a id="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](git@github.com:sumon766/frontend-doctor-appointment/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a id="support"></a>
+
+If you like this project please show support by staring ⭐️.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a id="acknowledgements"></a>
+
+- We would like to thank my team and my coding partners for their support and guidance.
+- The Design reference for the website belongs to [Murat Korkmaz](https://www.behance.net/muratk). You can find the reference [here](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a id="license"></a>
+
+This project is [MIT](./MIT.md) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -19,12 +19,14 @@
   ],
   "plugins": ["react"],
   "rules": {
+    "consistent-return": "off",
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "no-shadow": "off",
     "quotes": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "comma-dangle": "off"
   },
   "overrides": [
     {
@@ -55,9 +57,11 @@
         "operator-linebreak": "off",
         "dot-notation": "off",
         "camelcase": "off",
+        "comma-dangle": "off",
         "no-underscore-dangle": "off",
         "function-paren-newline": "off",
-        "arrow-body-style": "off"
+        "arrow-body-style": "off",
+        "react/prop-types": "off"
       }
     }
   ],

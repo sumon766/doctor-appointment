@@ -1,0 +1,38 @@
+
+.myappointmentContainer {
+  background-image: url('../../../public/images/my_appointments.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+}
+
+.appontmentsTable table {
+  margin-top: 75px;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: white;
+    width: 150px;
+  }
+
+  tr:nth-child(even) {
+    background-color: rgba(11, 50, 61, 0.26);
+  }
+}
+
+@media (max-width: 768px) {
+  th,
+  td {
+    width: 100px !important;
+  }
+}

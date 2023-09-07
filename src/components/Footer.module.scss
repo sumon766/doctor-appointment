@@ -1,0 +1,11 @@
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+
+  .icon {
+    font-size: 26px;
+    cursor: pointer;
+  }
+}
