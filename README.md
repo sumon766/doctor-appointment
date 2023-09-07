@@ -9,6 +9,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
     - [kanban Board](#kanban-board)
+    - [Member-group](#member-group)
   - [🎬 Representation](#representation)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -45,6 +46,14 @@
     <li><a>https://react.dev/</a></li>
   </ul>
 </details>
+
+### Number of Members <a id="member-group"></a>
+In this final capstone, a team of four(4) people has participated in bringing the requirement to life
+
+- Abdi @Lul-Abdifan 
+- Elham @Elhambasir 
+- MD Mursedul @sumon766  
+- James @serengia 
 
 <!-- Features -->
 ### Kanban Board <a id="kanban-board"></a>
