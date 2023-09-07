@@ -19,7 +19,7 @@ const Navbar = ({ setMobileMenuOpen }) => {
     try {
       await axios.delete("/users/sign_out");
     } catch (error) {
-      toast.error("Error wile logging out!");
+      toast.error("Error while logging out!");
     }
   };
 

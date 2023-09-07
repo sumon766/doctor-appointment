@@ -20,21 +20,9 @@ body {
   margin: 0 auto;
 }
 
-/* .full-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-} */
 
-/* .main-container {
-  width: 100%;
-} */
 
-.navbar-container {
-  /* position: absolute;
-  top: 50px;
-  left: 20px; */
-}
+
 
 .active-nav-link {
   background-color: #98bf11 !important;

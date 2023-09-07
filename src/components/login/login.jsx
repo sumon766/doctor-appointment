@@ -1,7 +1,6 @@
 import React from "react";
 import "./login.scss";
 import { toast } from "react-toastify";
-// import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useNavigate } from "react-router";
